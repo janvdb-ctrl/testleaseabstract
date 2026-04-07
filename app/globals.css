@@ -1,0 +1,112 @@
+/* Token file is imported in app/layout.tsx (../globals.css) before this file. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lease obligations dashboard — semantic colours (not in KAD). */
+:root {
+  /* Obligation status — semantic (not in KAD); pending = yellow per product spec */
+  --colour-semantic-pending-50: rgba(234, 179, 8, 0.18);
+  --colour-semantic-pending-100: #ca8a04;
+  --colour-semantic-danger-50: rgba(220, 38, 38, 0.12);
+  --colour-semantic-danger-100: #dc2626;
+  --colour-obligation-overdue-row: rgba(220, 38, 38, 0.07);
+
+  /**
+   * Flow 2 — obligation status pills (spec: colour-coded; maps to KAD + semantic tokens).
+   * Fulfilled = green (Status/Success), Pending = blue (Highlight/Blue),
+   * Overdue = red (semantic danger), Flagged = amber (Status/On-hold),
+   * Waived = neutral gray, Draft = muted gray.
+   */
+  --flow2-pill-fulfilled-bg: var(--colour-status-success-50);
+  --flow2-pill-fulfilled-border: var(--colour-status-success-100);
+  --flow2-pill-fulfilled-text: var(--colour-status-success-100);
+  --flow2-pill-pending-bg: var(--colour-highlight-blue-50);
+  --flow2-pill-pending-border: var(--colour-highlight-blue-100);
+  --flow2-pill-pending-text: var(--colour-highlight-blue-100);
+  --flow2-pill-overdue-bg: var(--colour-semantic-danger-50);
+  --flow2-pill-overdue-border: var(--colour-semantic-danger-100);
+  --flow2-pill-overdue-text: var(--colour-semantic-danger-100);
+  --flow2-pill-flagged-bg: var(--colour-status-on-hold-50);
+  --flow2-pill-flagged-border: var(--colour-status-on-hold-100);
+  --flow2-pill-flagged-text: var(--colour-status-on-hold-100);
+  --flow2-pill-waived-bg: color-mix(in srgb, var(--colour-neutral-80) 28%, transparent);
+  --flow2-pill-waived-border: var(--colour-neutral-60);
+  --flow2-pill-waived-text: var(--colour-neutral-30);
+  --flow2-pill-draft-bg: color-mix(in srgb, var(--colour-neutral-80) 15%, transparent);
+  --flow2-pill-draft-border: var(--colour-neutral-60);
+  --flow2-pill-draft-text: var(--colour-neutral-60);
+}
+
+/* KAD-aligned controls (Body/Button + Text Button patterns from design guidelines). */
+@layer components {
+  .kad-btn-primary {
+    @apply inline-flex min-h-[44px] min-w-0 cursor-pointer items-center justify-center rounded-control border border-transparent px-ls-16 py-ls-8 text-center text-fs-16 font-semibold leading-lh-24 transition-[filter,box-shadow];
+    background-color: var(--colour-highlight-blue-100);
+    color: var(--colour-neutral-100);
+    box-shadow: var(--shadow-none);
+  }
+
+  .kad-btn-primary:hover {
+    filter: brightness(1.06);
+  }
+
+  .kad-btn-primary:focus-visible {
+    outline: 2px solid var(--colour-highlight-blue-100);
+    outline-offset: 2px;
+  }
+
+  .kad-btn-secondary {
+    @apply inline-flex min-h-[44px] min-w-0 cursor-pointer items-center justify-center rounded-control px-ls-16 py-ls-8 text-center text-fs-16 font-semibold leading-lh-24 transition-colors;
+    border-width: var(--border-width-default);
+    border-color: var(--colour-neutral-30);
+    background-color: var(--colour-neutral-100);
+    color: var(--colour-neutral-15);
+    box-shadow: var(--shadow-none);
+  }
+
+  .kad-btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--colour-neutral-80) 35%, var(--colour-neutral-100));
+  }
+
+  .kad-btn-secondary:focus-visible {
+    outline: 2px solid var(--colour-neutral-30);
+    outline-offset: 2px;
+  }
+
+  .kad-btn-destructive {
+    @apply inline-flex min-h-[44px] min-w-0 cursor-pointer items-center justify-center rounded-control px-ls-16 py-ls-8 text-center text-fs-16 font-semibold leading-lh-24 transition-colors;
+    border-width: var(--border-width-default);
+    border-color: var(--colour-semantic-danger-100);
+    background-color: transparent;
+    color: var(--colour-semantic-danger-100);
+  }
+
+  .kad-btn-destructive:hover {
+    background-color: var(--colour-semantic-danger-50);
+  }
+
+  .kad-btn-destructive:focus-visible {
+    outline: 2px solid var(--colour-semantic-danger-100);
+    outline-offset: 2px;
+  }
+
+  .kad-input {
+    @apply w-full rounded-control px-ls-12 py-ls-8 text-fs-16 font-regular leading-lh-24 transition-shadow;
+    border-width: var(--border-width-default);
+    border-color: var(--colour-neutral-80);
+    background-color: var(--colour-neutral-100);
+    color: var(--colour-neutral-15);
+    box-shadow: var(--shadow-none);
+  }
+
+  .kad-input::placeholder {
+    color: var(--colour-neutral-60);
+  }
+
+  .kad-input:focus {
+    outline: none;
+    border-color: var(--colour-highlight-blue-100);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--colour-highlight-blue-100) 35%, transparent);
+  }
+}

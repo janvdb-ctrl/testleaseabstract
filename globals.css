@@ -1,0 +1,125 @@
+/**
+ * KARMA Dashboard — CSS custom properties from Figma
+ * File: https://www.figma.com/design/7wK0rmXRFvWhZE6xuSKra9/KARMA-DASHBOARD---DESIGN-UI
+ * Frame: Design Guidelines (261:158) · Variable collection: KAD
+ */
+
+:root {
+  /* Colour/Neutral/* */
+  --colour-neutral-100: #ffffff;
+  --colour-neutral-80: #c7c7c7;
+  --colour-neutral-60: #afafaf;
+  --colour-neutral-30: #3b3d3f;
+  --colour-neutral-25: #303235;
+  --colour-neutral-15: #1c1c1c;
+  --colour-neutral-10: #121212;
+  --colour-neutral-5: #080808;
+  --colour-neutral-0: #000000;
+
+  /* Colour/Highlight/Purple/* */
+  --colour-highlight-purple-50: #311b2c;
+  --colour-highlight-purple-100: #b89bff;
+
+  /* Colour/Highlight/Blue/* */
+  --colour-highlight-blue-50: #19212e;
+  --colour-highlight-blue-100: #13bcff;
+
+  /* Colour/Highlight/Green/* */
+  --colour-highlight-green-50: #192d21;
+  --colour-highlight-green-100: #54d97e;
+
+  /* Colour/Status/Success/* */
+  --colour-status-success-50: #112a1c;
+  --colour-status-success-100: #3cc0a6;
+
+  /* Colour/Status/On-hold/* */
+  --colour-status-on-hold-50: #392a19;
+  --colour-status-on-hold-100: #ff9c39;
+
+  /* Layout Size/ls-* */
+  --layout-size-ls-2: 2px;
+  --layout-size-ls-4: 4px;
+  --layout-size-ls-8: 8px;
+  --layout-size-ls-12: 12px;
+  --layout-size-ls-16: 16px;
+  --layout-size-ls-24: 24px;
+  --layout-size-ls-32: 32px;
+  --layout-size-ls-40: 40px;
+  --layout-size-ls-48: 48px;
+  --layout-size-ls-64: 64px;
+  --layout-size-ls-80: 80px;
+  --layout-size-ls-96: 96px;
+  --layout-size-ls-128: 128px;
+
+  /* Font/Size/fs-* */
+  --font-size-fs-12: 12px;
+  --font-size-fs-14: 14px;
+  --font-size-fs-16: 16px;
+  --font-size-fs-20: 20px;
+  --font-size-fs-24: 24px;
+  --font-size-fs-32: 32px;
+  --font-size-fs-40: 40px;
+  --font-size-fs-48: 48px;
+  --font-size-fs-64: 64px;
+
+  /* Font/Line Height/lh-* */
+  --font-line-height-lh-16: 16px;
+  --font-line-height-lh-20: 20px;
+  --font-line-height-lh-24: 24px;
+  --font-line-height-lh-28: 28px;
+  --font-line-height-lh-32: 32px;
+  --font-line-height-lh-40: 40px;
+  --font-line-height-lh-48: 48px;
+  --font-line-height-lh-56: 56px;
+  --font-line-height-lh-72: 72px;
+
+  /* Font/Family & Font/Weight (KAD string variables) */
+  --font-family-neue-plak-text: "Neue Plak Text", ui-sans-serif, system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* Text style presets (layer names in "Text Styles" / 751:751) */
+  --text-style-display-size: var(--font-size-fs-40);
+  --text-style-display-line-height: var(--font-line-height-lh-48);
+  --text-style-display-weight: var(--font-weight-semibold);
+
+  --text-style-section-heading-primary-size: var(--font-size-fs-24);
+  --text-style-section-heading-primary-line-height: var(--font-line-height-lh-32);
+  --text-style-section-heading-primary-weight: var(--font-weight-regular);
+
+  --text-style-section-heading-secondary-size: var(--font-size-fs-24);
+  --text-style-section-heading-secondary-line-height: var(--font-line-height-lh-32);
+  --text-style-section-heading-secondary-weight: var(--font-weight-regular);
+
+  --text-style-body-primary-size: var(--font-size-fs-16);
+  --text-style-body-primary-line-height: var(--font-line-height-lh-24);
+  --text-style-body-primary-weight: var(--font-weight-regular);
+
+  --text-style-body-secondary-size: var(--font-size-fs-16);
+  --text-style-body-secondary-line-height: var(--font-line-height-lh-24);
+  --text-style-body-secondary-weight: var(--font-weight-semibold);
+
+  --text-style-body-button-size: var(--font-size-fs-16);
+  --text-style-body-button-line-height: var(--font-line-height-lh-24);
+  --text-style-body-button-weight: var(--font-weight-semibold);
+
+  --text-style-caption-primary-size: var(--font-size-fs-16);
+  --text-style-caption-primary-line-height: var(--font-line-height-lh-24);
+  --text-style-caption-primary-weight: var(--font-weight-semibold);
+
+  --text-style-caption-secondary-size: var(--font-size-fs-16);
+  --text-style-caption-secondary-line-height: var(--font-line-height-lh-24);
+  --text-style-caption-secondary-weight: var(--font-weight-regular);
+
+  /* Border radius — from component geometry (no KAD variables); names describe usage */
+  --radius-card: 5px;
+  --radius-control: 5px;
+  --radius-badge: 8px;
+  --radius-treasury-stack-item: 10px;
+
+  /* Stroke — common 1px border on cards / controls */
+  --border-width-default: 1px;
+
+  /* Shadow — no drop shadow on this frame in Figma; placeholder for future token */
+  --shadow-none: none;
+}

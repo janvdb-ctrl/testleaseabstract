@@ -1,0 +1,15 @@
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  plugins: {
+    // Explicit config path so Tailwind always picks up theme tokens from repo root
+    tailwindcss: { config: path.join(__dirname, "tailwind.config.ts") },
+    autoprefixer: {},
+  },
+};
+
+export default config;
